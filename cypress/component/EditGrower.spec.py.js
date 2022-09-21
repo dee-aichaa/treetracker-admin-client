@@ -44,7 +44,7 @@ describe('EditGrower', () => {
         <ThemeProvider theme={theme}>
           <EditGrower grower={{}} isOpen={true} onClose={() => {}} />
         </ThemeProvider>
-      </Provider>,
+      </Provider>
     );
     cy.contains(/Edit Grower/i);
   });
@@ -76,7 +76,7 @@ describe('EditGrower', () => {
           <ThemeProvider theme={theme}>
             <EditGrower grower={grower} isOpen={true} onClose={() => {}} />
           </ThemeProvider>
-        </Provider>,
+        </Provider>
       );
     });
 
@@ -84,7 +84,7 @@ describe('EditGrower', () => {
       cy.get(`[title="${grower.imageUrl}"]`).should(
         'have.css',
         'background-image',
-        `url("${grower.imageUrl}")`,
+        `url("${grower.imageUrl}")`
       );
       cy.get('input#firstName').should('have.value', grower.firstName);
       cy.get('input#lastName').should('have.value', grower.lastName);
@@ -97,7 +97,7 @@ describe('EditGrower', () => {
         cy.get(`[title="${img}"]`).should(
           'have.css',
           'background-image',
-          `url("${img}")`,
+          `url("${img}")`
         );
       });
     });

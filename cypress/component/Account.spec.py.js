@@ -25,7 +25,7 @@ describe('Account', () => {
     mount(
       <ThemeProvider theme={theme}>
         <Account user={user} />
-      </ThemeProvider>,
+      </ThemeProvider>
     );
     cy.contains(/Dadior/i);
   });

@@ -9,7 +9,7 @@ describe('Login', () => {
     mount(
       <ThemeProvider theme={theme}>
         <Login />
-      </ThemeProvider>,
+      </ThemeProvider>
     );
     cy.contains(/Login/i);
   });

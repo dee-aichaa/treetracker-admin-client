@@ -233,7 +233,6 @@ const useStyle = makeStyles((theme) => ({
 
 // Set API as a variable
 const CAPTURE_API = `${process.env.REACT_APP_TREETRACKER_API_ROOT}`;
-
 function CaptureMatchingView() {
   const initialFilter = {
     startDate: '',
@@ -551,15 +550,12 @@ function CaptureMatchingView() {
                     }}
                     onClick={() => {
                       window.open(
-                        `https://www.google.com/maps/search/?api=1&query=${captureImage.latitude},${captureImage.longitude}`
+                        `https://www.google.com/maps/search/?api=1&query=${captureImage.lat},${captureImage.lon}`
                       );
                     }}
                   />
                   <Typography variant="body1">
-                    <Country
-                      lat={captureImage.latitude}
-                      lon={captureImage.longitude}
-                    />
+                    <Country lat={captureImage.lat} lon={captureImage.lon} />
                   </Typography>
                 </Box>
               </Box>
