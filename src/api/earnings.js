@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { session } from '../models/auth';
 
-const apiUrl = `${process.env.REACT_APP_EARNINGS_ROOT}`;
+const apiUrl = `${process.env.REACT_APP_API_ROOT}/auth`;
 const Axios = axios.create({ baseURL: apiUrl });
 
 export default {
